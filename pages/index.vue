@@ -87,6 +87,7 @@ export default {
 body {
   transition: background 0.5s ease-in-out;
   color: white;
+  min-height: 100vh;
 }
 
 body.light-text {

@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ["@nuxtjs/tailwindcss"],
+  modules: ["@nuxtjs/tailwindcss", "@nuxt/content"],
   app: {
     head: {
       title: "Ali Khalouf | Front-end Developer and an open source enthusiast",
@@ -24,14 +24,25 @@ export default defineNuxtConfig({
         { name: "twitter:site", content: "@itsAliKhalouf" },
         { name: "twitter:creator", content: "@itsAliKhalouf" },
         { name: "twitter:image", content: "/personal.jpeg" },
-        {name: "twitter:site", content: "@itsAliKhalouf"},
-        {name: "twitter:description", content: "Hey, I'm Ali Khalouf and I am a Front-end Developer and an open source enthusiast."},
-        {name: "og:title", content: "Ali Khalouf | Front-end Developer and an open"},
-        {name: "og:description", content: "Hey, I'm Ali Khalouf and I am a Front-end Developer and an open source enthusiast."},
-        {name: "og:image", content: "/personal.jpeg"},
-        {name: "og:url", content: "https://itsAliKhalouf.com"},
-        {name: "lang", content: "en_US"},
-        {name: "icon", content: "/logo.png"},
+        { name: "twitter:site", content: "@itsAliKhalouf" },
+        {
+          name: "twitter:description",
+          content:
+            "Hey, I'm Ali Khalouf and I am a Front-end Developer and an open source enthusiast.",
+        },
+        {
+          name: "og:title",
+          content: "Ali Khalouf | Front-end Developer and an open",
+        },
+        {
+          name: "og:description",
+          content:
+            "Hey, I'm Ali Khalouf and I am a Front-end Developer and an open source enthusiast.",
+        },
+        { name: "og:image", content: "/personal.jpeg" },
+        { name: "og:url", content: "https://itsAliKhalouf.com" },
+        { name: "lang", content: "en_US" },
+        { name: "icon", content: "/logo.png" },
         {
           name: "twitter:title",
           content:

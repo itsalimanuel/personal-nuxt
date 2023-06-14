@@ -3,7 +3,9 @@ import Header from './components/header.vue'
 </script>
 <template>
   <Header/>
-  <NuxtPage />
+  <main class="min-h-screen">
+    <NuxtPage />
+  </main>
   <Footer/>
 </template>
 

@@ -6,8 +6,13 @@ const links = reactive({
     urls: [
         {
             name: 'Talks',
-            url: '/'
+            url: '/',
+            tag: 'Talks'
         },
+        {
+            name: 'Posts',
+            url: '/posts'
+        }
     ]
 })
 </script>
@@ -15,13 +20,13 @@ const links = reactive({
 <template>
     <div
         class="container max-lg:px-[40px] absolute top-0 w-full z-10 left-1/2 -translate-x-1/2 py-10 flex items-center justify-between text-xs uppercase">
-        <div class="text-xs  flex items-center gap-2">
+        <NuxtLink to="/" class="text-xs  flex items-center gap-2">
             <!-- <img :src="logo" alt="" class="w-10 h-10"> -->
             {{ title }}
-        </div>
+        </NuxtLink>
         <div class="flex items-center gap-2  ">
             <NuxtLink v-for="(link, index) in links.urls" class="opacity-50 hover:opacity-100 transition-all"
-                :key="index" :to="link.url">{{ link.name }} <sup class="font-bold">/soon</sup></NuxtLink>
+                :key="index" :to="link.url">{{ link.name }} <sup v-if="link.tag == 'Talks'" class="font-bold">/soon</sup></NuxtLink>
         </div>
         <NuxtLink to="https://twitter.com/itsalikhalouf" class="relative gap-2 group">
             <span>let't talk</span>
