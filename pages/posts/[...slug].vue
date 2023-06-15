@@ -1,5 +1,5 @@
 <template>
-  <main class="mt-[100px] max-w-lg mx-auto" >
+  <main class="mt-[100px] max-w-lg mx-auto max-lg:px-[30px]" >
     <ContentDoc/>
   </main>
 </template>
