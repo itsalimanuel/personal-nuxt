@@ -4,7 +4,7 @@ description: A Comparative Analysis of Vue 3, Astro, and Svelte Choosing the Rig
 ---
 
 
-![A Cool Image](/posts/2.svg)
+![A Cool Image](/posts/2.jpg)
 
 # Introduction:
 
