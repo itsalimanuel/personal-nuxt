@@ -16,12 +16,12 @@ Vue 3, the latest version of Vue.js, is a progressive JavaScript framework that 
 
 ### Advantages of Vue 3:
 
-* Ease of learning and intuitive syntax.
-* Extensive documentation and a vibrant community.
-* Reactive and declarative components.
-* Optimized rendering with a virtual DOM.
-* Advanced TypeScript support.
-* Composition API for more scalable and reusable code.
+1. Ease of learning and intuitive syntax.
+2. Extensive documentation and a vibrant community.
+3. Reactive and declarative components.
+4. Optimized rendering with a virtual DOM.
+5. Advanced TypeScript support.
+6. Composition API for more scalable and reusable code.
 
 ## Astro:
 
@@ -29,11 +29,11 @@ Astro is a modern static site generator that leverages server-side rendering (SS
 
 ### Advantages of Astro:
 
-    - Framework-agnostic architecture for component-based development.
-    - Server-side rendering for improved performance and SEO.
-    - Easy integration with existing projects and frameworks.
-    - Simplified deployment as static files.
-    - Support for dynamic data and serverless functions.
+1. Framework-agnostic architecture for component-based development.
+2. Server-side rendering for improved performance and SEO.
+3. Easy integration with existing projects and frameworks.
+4. Simplified deployment as static files.
+5. Support for dynamic data and serverless functions.
 
 ## Svelte:
 
@@ -41,22 +41,22 @@ Svelte is a radical JavaScript framework that takes a compiler-based approach to
 
 ### Advantages of Svelte:
 
-* Highly performant applications with smaller bundle sizes.
-* Compile-time optimizations for efficient code generation.
-* Easy component-based architecture.
-* Simple and intuitive syntax.
-* Minimal runtime overhead.
-* Built-in state management.
+1. Highly performant applications with smaller bundle sizes.
+2. Compile-time optimizations for efficient code generation.
+3. Easy component-based architecture.
+4. Simple and intuitive syntax.
+5. Minimal runtime overhead.
+6. Built-in state management.
 
 ### Comparative Analysis:
 
-*  Learning Curve: Vue 3 has an easy learning curve, especially for developers familiar with HTML, CSS, and JavaScript. Astro allows leveraging existing frameworks, making it suitable for developers experienced in various ecosystems. Svelte introduces a new paradigm, which may require a slight learning curve for developers.
+1. Learning Curve: Vue 3 has an easy learning curve, especially for developers familiar with HTML, CSS, and JavaScript. Astro allows leveraging existing frameworks, making it suitable for developers experienced in various ecosystems. Svelte introduces a new paradigm, which may require a slight learning curve for developers.
 
-*  Performance: Svelte excels in terms of performance due to its compilation approach, resulting in faster load times and smaller bundle sizes. Vue 3 and Astro also offer good performance but may have slightly larger bundle sizes compared to Svelte.
+2. Performance: Svelte excels in terms of performance due to its compilation approach, resulting in faster load times and smaller bundle sizes. Vue 3 and Astro also offer good performance but may have slightly larger bundle sizes compared to Svelte.
 
-*  Ecosystem and Community: Vue 3 has a mature and active community with extensive libraries and plugins available. Astro benefits from its ecosystem's compatibility with various frameworks. Svelte, although growing rapidly, has a smaller ecosystem compared to Vue 3 and Astro.
+3. Ecosystem and Community: Vue 3 has a mature and active community with extensive libraries and plugins available. Astro benefits from its ecosystem's compatibility with various frameworks. Svelte, although growing rapidly, has a smaller ecosystem compared to Vue 3 and Astro.
 
-*  Flexibility: Vue 3 offers great flexibility with its component-based architecture and the Composition API. Astro provides the flexibility to mix and match components from different frameworks. Svelte's approach is more opinionated but allows for easy component reuse and state management.
+3. Flexibility: Vue 3 offers great flexibility with its component-based architecture and the Composition API. Astro provides the flexibility to mix and match components from different frameworks. Svelte's approach is more opinionated but allows for easy component reuse and state management.
 
 ### Conclusion:
 
