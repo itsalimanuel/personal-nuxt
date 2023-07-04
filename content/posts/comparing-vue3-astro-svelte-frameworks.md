@@ -1,6 +1,6 @@
 ---
-title:  A Comparative Analysis of Vue 3, Astro, and Svelte: Choosing the Right Framework for Your Project
-description: A Comparative Analysis of Vue 3, Astro, and Svelte: Choosing the Right Framework for Your Project
+title: Choosing the Right Framework for Your Project
+description: A Comparative Analysis of Vue 3, Astro, and Svelte Choosing the Right Framework for Your Project
 ---
 
 # Introduction:
