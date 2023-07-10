@@ -1,6 +1,6 @@
 ---
 title: Exploring the Optional API vs. Compositional API in Vue.js
-description: 
+description: The Optional API is the traditional approach to building Vue components, and it relies heavily on the Options Object syntax.
 ---
 
 ## Exploring the Optional API vs. Compositional API in Vue.js
@@ -17,9 +17,9 @@ The Optional API is the traditional approach to building Vue components, and it 
 
 **Benefits of the Optional API:**
 
-1. Familiarity: The Optional API aligns closely with the traditional Vue.js syntax, making it easier for developers who are already familiar with Vue to get started.
-2. Clear separation: The Options Object syntax provides a clear separation between different concerns, such as methods, data, and lifecycle hooks, making the codebase easier to navigate and maintain.
-3. Flexibility: The Optional API allows developers to utilize a wide range of Vue's features, including mixins, directives, and filters, which can be useful in certain scenarios.
+- Familiarity: The Optional API aligns closely with the traditional Vue.js syntax, making it easier for developers who are already familiar with Vue to get started.
+- Clear separation: The Options Object syntax provides a clear separation between different concerns, such as methods, data, and lifecycle hooks, making the codebase easier to navigate and maintain.
+- Flexibility: The Optional API allows developers to utilize a wide range of Vue's features, including mixins, directives, and filters, which can be useful in certain scenarios.
 
 **Understanding the Compositional API:**
 
@@ -27,20 +27,20 @@ The Compositional API, introduced in Vue.js 3, takes a more functional approach 
 
 **Benefits of the Compositional API:**
 
-1. Code organization: With the Compositional API, logic can be organized into smaller, reusable functions, which promotes code maintainability and reusability. It allows developers to focus on building individual functions that encapsulate specific behaviors, making the codebase more modular and easier to test.
-2. Type safety: Vue.js 3, which introduced the Compositional API, leverages TypeScript to provide better type checking and autocompletion support, leading to fewer runtime errors and improved developer productivity.
-3. Improved debugging: The Compositional API offers better debugging capabilities by providing clearer stack traces and more granular error messages, making it easier to pinpoint issues within the code.
+- Code organization: With the Compositional API, logic can be organized into smaller, reusable functions, which promotes code maintainability and reusability. It allows developers to focus on building individual functions that encapsulate specific behaviors, making the codebase more modular and easier to test.
+- Type safety: Vue.js 3, which introduced the Compositional API, leverages TypeScript to provide better type checking and autocompletion support, leading to fewer runtime errors and improved developer productivity.
+- Improved debugging: The Compositional API offers better debugging capabilities by providing clearer stack traces and more granular error messages, making it easier to pinpoint issues within the code.
 
 **Choosing the Right API for Your Project:**
 
 The choice between the Optional API and Compositional API depends on various factors, including the project's size, complexity, team familiarity, and personal preferences. Here are some guidelines to consider:
 
-1. Optional API:
+- Optional API:
    - Best suited for small to medium-sized projects or when working with a team that is already familiar with the Options Object syntax.
    - Provides a declarative approach and easy integration with Vue ecosystem features like mixins, directives, and filters.
    - Offers a clear separation of concerns and is suitable for developers who prefer a more traditional Vue.js approach.
 
-2. Compositional API:
+- Compositional API:
    - Recommended for larger projects or when code reusability and modularity are critical.
    - Enables better organization and maintainability of code through composition functions.
    - Provides improved type safety and debugging capabilities, especially when used with TypeScript.
