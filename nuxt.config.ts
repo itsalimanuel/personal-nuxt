@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ["@nuxtjs/tailwindcss", "@nuxt/content"],
+  plugins: [{ src: '~/plugins/vercel.ts', mode: 'client' }],
   app: {
     head: {
       title: "Ali Khalouf | Front-end Developer and an open source enthusiast",
