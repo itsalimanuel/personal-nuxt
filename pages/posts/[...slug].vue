@@ -6,6 +6,23 @@
 
 
 <style>
+ pre {
+        background-color: #f5f5f5;
+        padding: 10px;
+        border-radius: 4px;
+        font-family: monospace;
+        overflow-x: auto;
+        margin-bottom: 15px;
+    }
+
+    code {
+        font-family: monospace;
+        color: #333;
+        background-color: #f5f5f5;
+        padding: 2px 4px;
+        border-radius: 4px;
+       
+    }
 h1{
   @apply text-5xl mb-5
 }
