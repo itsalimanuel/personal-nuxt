@@ -1,18 +1,17 @@
-
 <script>
-import { ref } from 'vue';
+import { ref } from "vue";
 
 export default {
   setup() {
     const colors = [
-      '#ff0000',
-      '#00ff00',
-      '#0000ff',
-      '#ffff00',
-      '#00ffff',
-      '#ff00ff',
+      "#ff0000",
+      "#00ff00",
+      "#0000ff",
+      "#ffff00",
+      "#00ffff",
+      "#ff00ff",
     ];
-    const currentColors = ref(['#000000', '#000000']);
+    const currentColors = ref(["#000000", "#000000"]);
     const isLightBackground = ref(false);
 
     const changeBackgroundColor = () => {
@@ -27,7 +26,7 @@ export default {
       isLightBackground.value = isLight1 || isLight2;
 
       // Set text color based on background color
-      const textColor = isLightBackground.value ? 'black' : 'white';
+      const textColor = isLightBackground.value ? "black" : "white";
       document.body.style.color = textColor;
     };
 
@@ -37,7 +36,7 @@ export default {
     };
 
     const getBrightness = (color) => {
-      const hexColor = color.replace('#', '');
+      const hexColor = color.replace("#", "");
       const r = parseInt(hexColor.substr(0, 2), 16);
       const g = parseInt(hexColor.substr(2, 2), 16);
       const b = parseInt(hexColor.substr(4, 2), 16);
@@ -53,29 +52,19 @@ export default {
 };
 </script>
 
-
 <template>
-  <div class=" h-full">
-    <div class="container h-screen flex flex-col justify-center max-lg:items-center mx-auto relative">
-      <h2 class="text-sm uppercase opacity-60 ">Welcome to my website</h2>
-      <h1 class="text-5xl font-mono max-w-4xl max-lg:text-2xl max-lg:max-w-md max-lg:text-center mt-5 leading-[130%]">Leader & Senior Front-end / CREATIVE DEVELOPER Open
-        source enthusiast.</h1>
-      <div class="flex items-center gap-2 absolute bottom-5 cursor-pointer" @click="changeBackgroundColor">
-        <div class="w-11 h-11 bg-orange-400 rounded-[50%] flex items-center transition-all hover:z-10 justify-center">
-          <div class="absolute inset-0 flex items-center justify-center">
-            <div class="circle delay1"></div>
-            <div class="circle delay2"></div>
-            <div class="circle delay3"></div>
-            <div class="circle delay4"></div>
-          </div>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-            class="w-5 h-5 z-20 relative">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
-          </svg>
+  <div class="h-full">
+    <div
+      class="container h-screen flex flex-col justify-center max-lg:items-center mx-auto relative"
+    >
 
-        </div>
-      </div>
+      <h1
+        class="text-9xl font-normal max-w-6xl max-lg:text-2xl max-lg:max-w-md max-lg:text-center mt-5 leading-[130%]"
+      >
+        Hey, I'm <span class="line-through">Ali Khalouf</span>, <strong>A-li Khalouf</strong>
+      </h1>
+      <h2 class="text-sm uppercase text-gray-400">Tech Leader & Front-end at <strong class="text-white opacity-100">Artfi</strong></h2>
+
     </div>
     <Creator :textColor="isLightBackground ? 'black' : 'white'" />
     <Worked />
@@ -88,6 +77,7 @@ body {
   transition: background 0.5s ease-in-out;
   color: white;
   min-height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 body.light-text {
@@ -124,11 +114,11 @@ body.light-text {
   }
 
   65% {
-    transform: scale3d(.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
   }
 
   75% {
-    transform: scale3d(1.05, .95, 1);
+    transform: scale3d(1.05, 0.95, 1);
   }
 
   100% {
@@ -138,11 +128,11 @@ body.light-text {
 
 .delay1 {
   animation: waves 2.5s linear infinite;
-  animation-delay: .1s;
+  animation-delay: 0.1s;
 }
 
 .delay2 {
-  animation: waves 2.5s linear .7s infinite;
+  animation: waves 2.5s linear 0.7s infinite;
 }
 
 .delay3 {
@@ -165,7 +155,7 @@ body.light-text {
   z-index: -1;
   display: block;
   border-radius: 50%;
-  background-color: #F97316;
+  background-color: #f97316;
   margin: 10px;
   transition: 5s ease;
   position: absolute;
