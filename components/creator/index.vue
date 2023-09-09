@@ -12,6 +12,11 @@ export default {
     return {
       list: [
         {
+          name: "Renux",
+          tag: "UI",
+          desc: "Renux UI Component Library is a collection of reusable UI components designed for building modern web applications using nuxtjs",
+        },
+        {
           name: "Renix",
           tag: "UI",
           desc: "Renix UI Component Library is a collection of reusable UI components designed for building modern web applications using React, Next.js, and Remix.",
@@ -26,16 +31,6 @@ export default {
           tag: "JS",
           desc: "Arabic text to Latin and URL slug converter.",
         },
-        {
-          name: "araslug",
-          tag: "PHP",
-          desc: "Arabic text to Latin and URL slug converter.",
-        },
-        {
-          name: "Arab Packs",
-          tag: "IO",
-          desc: "Arab Packs Community: A collaborative hub of Arab developers, hosting diverse open source projects across technology domains.",
-        },
       ],
     };
   },
@@ -46,15 +41,36 @@ export default {
       audioPlayer.play();
     },
   },
+  mounted: () => {
+    const updateCursor = ({ x, y }) => {
+      document.documentElement.style.setProperty("--x", x);
+      document.documentElement.style.setProperty("--y", y);
+    };
+
+    document.body.addEventListener("pointermove", updateCursor);
+  },
 };
 </script>
 
 <template>
   <div class="container max-lg:px-[20px] mx-auto my-8">
     <audio ref="audioPlayer" src="/click.mp3"></audio>
-    <h1 class="text-2xl font-mono uppercase">Creator of:</h1>
-    <div class="grid grid-cols-2 gap-3 mt-8 max-lg:flex max-lg:flex-col w-full">
+    <h1 class="text-2xl uppercase text-center">Creator of:</h1>
+    <div
+    
+      class="grid grid-cols-4 gap-3 mt-8  max-lg:grid-cols-1 w-full text-center"
+    >
       <div
+        class="p-6 card flex flex-col gap-5 justify-between"
+        v-for="(i, index) in list"
+        :key="index"
+      >
+        <h2 class="text-3xl uppercase">
+          {{ i.name }} <sup class="text-sm text-red-500"> / {{ i.tag }}</sup>
+        </h2>
+        <p class="text-sm">{{ i.desc }}</p>
+      </div>
+      <!-- <div
         v-for="(i, index) in list"
         :key="index"
         class="cursor-pointer relative"
@@ -81,7 +97,7 @@ export default {
               : 'text-yellow-900',
           ]"
         >
-          {{ i.name }} <sup class="text-sm">{{ i.tag }}</sup>
+          {{ i.name }} <sup class="text-sm text-red-500"> / {{ i.tag }}</sup>
         </h2>
         <hr
           class="my-4"
@@ -93,10 +109,69 @@ export default {
               : 'border-black',
           ]"
         />
-        <p class="opacity-70 font-normal font-mono">
+        <p class="opacity-70 font-normal">
           {{ i.desc }}
         </p>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
+
+<style scoped>
+.card {
+  background: hsl(0 0% 4%);
+  box-shadow: 0px 0px 1px #ddd;
+  aspect-ratio: 4 / 3;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+
+.card:hover {
+  --active: 1;
+}
+
+.card:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at calc(var(--x) * 1px) calc(var(--y) * 1px),
+    hsl(0 0% 100% / 0.15),
+    transparent 15vmin
+  );
+  background-attachment: fixed;
+  opacity: var(--active, 0);
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+
+.card:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+      circle at calc(var(--x) * 1px) calc(var(--y) * 1px),
+      hsl(0 0% 100% / 0.5),
+      transparent 15vmin
+    ),
+    transparent;
+  background-attachment: fixed;
+  pointer-events: none;
+  mask:
+    linear-gradient(white, white) 50% 0 / 100% 4px no-repeat,
+    linear-gradient(white, white) 50% 100% / 100% 4px no-repeat,
+    linear-gradient(white, white) 0 50% / 4px 100% no-repeat,
+    linear-gradient(white, white) 100% 50% / 4px 100% no-repeat;
+}
+
+span {
+  font-family: sans-serif, system-ui;
+  position: absolute;
+  bottom: 0.65rem;
+  right: 0.65rem;
+  font-weight: bold;
+  font-size: 2rem;
+  color: hsl(0 0% 100%);
+}
+</style>

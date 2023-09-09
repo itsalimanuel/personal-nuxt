@@ -43,7 +43,7 @@ export default {
 
 <template>
   <div class="mt-[70px] container max-lg:px-[20px] mx-auto">
-    <h2 class="text-center mb-[70px] text-3xl font-mono">Projects</h2>
+    <h2 class="text-center mb-[70px] text-3xl ">Projects</h2>
     <div class="grid grid-cols-1 gap-4">
       <NuxtLink
         :to="i.link"
