@@ -86,7 +86,7 @@
           Mobile products and artificial intelligence for business.
         </p>
       </div>
-      <div class="border rounded flex flex-col gap-3 p-5">
+      <div class="border rounded flex flex-col gap-3 p-5 col-start-1 col-end-3">
         <img
           width="40"
           height="40"
