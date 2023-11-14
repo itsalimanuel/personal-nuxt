@@ -55,7 +55,8 @@ export default {
 <template>
   <div class="container max-lg:px-[20px] mx-auto my-8">
     <audio ref="audioPlayer" src="/click.mp3"></audio>
-    <h1 class="text-2xl uppercase text-center">Creator of:</h1>
+    <h1 class="text-2xl uppercase text-center">Creator of :</h1>
+   
     <div
     
       class="grid grid-cols-4 gap-3 mt-8  max-lg:grid-cols-1 w-full text-center"
@@ -70,58 +71,16 @@ export default {
         </h2>
         <p class="text-sm">{{ i.desc }}</p>
       </div>
-      <!-- <div
-        v-for="(i, index) in list"
-        :key="index"
-        class="cursor-pointer relative"
-        :class="[
-          'p-5',
-          'rounded',
-          'border',
-          index === 4 && index % 2 !== 1 ? 'col-start-1 col-end-3' : '',
-          textColor === 'black'
-            ? 'border-black'
-            : textColor === 'white'
-            ? 'border-white'
-            : 'border',
-        ]"
-        @mouseenter="playAudio"
-      >
-        <h2
-          class="text-3xl"
-          :class="[
-            textColor === 'black'
-              ? 'text-gray-800'
-              : textColor === 'white'
-              ? 'text-gray-200'
-              : 'text-yellow-900',
-          ]"
-        >
-          {{ i.name }} <sup class="text-sm text-red-500"> / {{ i.tag }}</sup>
-        </h2>
-        <hr
-          class="my-4"
-          :class="[
-            textColor === 'black'
-              ? 'border-black'
-              : textColor === 'white'
-              ? 'border-white'
-              : 'border-black',
-          ]"
-        />
-        <p class="opacity-70 font-normal">
-          {{ i.desc }}
-        </p>
-      </div> -->
     </div>
   </div>
 </template>
 
 <style scoped>
+
 .card {
   background: hsl(0 0% 4%);
   box-shadow: 0px 0px 1px #ddd;
-  aspect-ratio: 4 / 3;
+  /* aspect-ratio: 4 / 3; */
   position: relative;
   cursor: pointer;
   transition: background 0.1s;
@@ -174,4 +133,5 @@ span {
   font-size: 2rem;
   color: hsl(0 0% 100%);
 }
+
 </style>

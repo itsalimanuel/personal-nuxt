@@ -59,11 +59,11 @@ export default {
     >
 
       <h1
-        class="text-9xl font-normal max-w-6xl max-lg:text-2xl max-lg:max-w-md max-lg:text-center mt-5 leading-[130%]"
+        class="text-7xl max-w-xl font-sans uppercase mx-auto text-center font-normal max-w-6xl max-lg:text-2xl max-lg:max-w-md max-lg:text-center mt-5 leading-[130%]"
       >
         Hey, I'm <span class="line-through">Ali Khalouf</span>, <strong>A-li Khalouf</strong>
       </h1>
-      <h2 class="text-sm uppercase text-gray-400">Tech Leader & Front-end at <strong class="text-white opacity-100">Artfi</strong></h2>
+      <h2 class="text-sm text-center uppercase text-gray-400">Tech Leader & Front-end at <strong class="text-white opacity-100">Artfi</strong></h2>
 
     </div>
     <Creator :textColor="isLightBackground ? 'black' : 'white'" />
