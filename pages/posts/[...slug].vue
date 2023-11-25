@@ -33,12 +33,19 @@ p{
   @apply text-sm text-gray-400 mb-5 
 }
 li{
-  @apply my-3 text-lg 
+  @apply my-3 text-sm text-gray-500
 }
 img{
   @apply h-auto mx-auto
 }
 hr{
   @apply py-3
+}
+ul{
+  list-style-type: circle;
+}
+p a{
+  text-decoration: underline;
+  cursor: pointer;
 }
 </style>
