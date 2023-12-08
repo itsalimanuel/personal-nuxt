@@ -1,20 +1,18 @@
 <script setup>
-import Header from './components/header.vue'
-import { injectSpeedInsights } from '@vercel/speed-insights';
-
-injectSpeedInsights();
-
+import Header from "./components/header.vue";
+import { SpeedInsights } from "@vercel/speed-insights/nuxt";
 </script>
 <template>
-  <Header/>
+  <SpeedInsights />
+  <Header />
   <main class="min-h-screen">
     <NuxtPage />
   </main>
-  <Footer/>
+  <Footer />
 </template>
 
 <style>
-body{
-  @apply min-h-screen bg-black text-white
+body {
+  @apply min-h-screen bg-black text-white;
 }
 </style>
