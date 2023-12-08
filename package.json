@@ -17,6 +17,7 @@
     "nuxt": "^3.8.1"
   },
   "dependencies": {
-    "@vercel/analytics": "^1.0.1"
+    "@vercel/analytics": "^1.0.1",
+    "@vercel/speed-insights": "^1.0.0"
   }
 }

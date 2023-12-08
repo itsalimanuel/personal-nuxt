@@ -1,5 +1,9 @@
 <script setup>
 import Header from './components/header.vue'
+import { injectSpeedInsights } from '@vercel/speed-insights';
+
+injectSpeedInsights();
+
 </script>
 <template>
   <Header/>
