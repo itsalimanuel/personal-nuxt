@@ -4,12 +4,20 @@ export default {
     return {
       list: [
         {
+          name: "Artfi",
+          link: "https://www.artfi.world",
+        },
+        {
+          name: "Artfi Token",
+          link: "https://www.artfitoken.io",
+        },
+        {
           name: "StarEX",
-          link: "http://www.starex.sg",
+          link: "https://www.starex.sg",
         },
         {
           name: "StarEX Academy",
-          link: "http://www.starexacademy.sg",
+          link: "https://www.starexacademy.sg",
         },
         {
           name: "Carbon mobile",
@@ -43,7 +51,7 @@ export default {
 
 <template>
   <div class="mt-[70px] container max-lg:px-[20px] mx-auto">
-    <h2 class="text-center mb-[70px] text-3xl ">Projects</h2>
+    <h2 class="text-center mb-[70px] text-3xl">Projects</h2>
     <div class="grid grid-cols-1 gap-4">
       <NuxtLink
         :to="i.link"
@@ -72,7 +80,9 @@ export default {
   height: 0;
   background: rgba(214, 213, 213, 0.561);
   opacity: 0;
-  transition: height 0.3s ease, opacity 0.3s ease;
+  transition:
+    height 0.3s ease,
+    opacity 0.3s ease;
 }
 
 .hover-effect:hover::before {
