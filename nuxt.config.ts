@@ -26,6 +26,7 @@ export default defineNuxtConfig({
         { name: "twitter:creator", content: "@itsAliKhalouf" },
         { name: "twitter:image", content: "/personal.jpeg" },
         { name: "twitter:site", content: "@itsAliKhalouf" },
+        {name: 'google-site-verification', content: 'CIpPm83-dXR_gjFWPWbNNxFfxT-oyoCbpVRfFTAlZDw'},
         {
           name: "twitter:description",
           content:
