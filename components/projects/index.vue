@@ -35,14 +35,7 @@ export default {
           name: "Ferrum",
           link: "https://ferrumpanel.ru",
         },
-        {
-          name: "Pitomnik",
-          link: "https://glav-pitomnik.ru",
-        },
-        {
-          name: "Rubin",
-          link: "https://rubin.pro",
-        },
+        
       ],
     };
   },
