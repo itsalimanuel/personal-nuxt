@@ -15,21 +15,50 @@ export default {
           name: "Renux",
           tag: "UI",
           desc: "Renux UI Component Library is a collection of reusable UI components designed for building modern web applications using nuxtjs",
+          link: "https://github.com/itsalimanuel/renux"
         },
         {
           name: "Renix",
           tag: "UI",
           desc: "Renix UI Component Library is a collection of reusable UI components designed for building modern web applications using React, Next.js, and Remix.",
+          link: "https://github.com/itsalimanuel/renix"
         },
+        {
+          name: "Drop",
+          tag: "UI",
+          desc: "Drop UI Component Library is a collection of reusable UI components designed for building modern web applications using Vue, nuxt.js.",
+          link: "https://github.com/itsalimanuel/drop"
+        },
+        {
+          name: "Listra",
+          tag: "Crypto",
+          desc: "Listra is a decentralized application that allows you to easily create and manage your own NFT marketplace on the Ethereum blockchain.",
+          link: "https://www.listra.io/",
+        },
+        {
+          name: "packages-me",
+          tag: "mg",
+          desc: "OneLinePackages is a website that allows you to easily retrieve all of your installed packages from the NPM registry API in just one line of code.",
+          link: "https://www.onelinepackages.xyz/",
+        },
+        {
+          name: "Namask",
+          tag: "Ai",
+          desc: "Unveiling our AI Customer Service Tool, your next-gen support solution. Enjoy personalized, lightning-fast assistance 24/7, all while gaining valuable insights",
+          link: "https://www.namask.xyz/",
+        },
+        
         {
           name: "Pigeon",
           tag: "JS",
           desc: "Pigeon is a @vuejs component library designed to help website owners easily add chat/live support and contact information to their websites.",
+          link: "https://github.com/itsalimanuel/pigeon"
         },
         {
           name: "arabicSlug",
           tag: "JS",
           desc: "Arabic text to Latin and URL slug converter.",
+          link: "https://github.com/itsalimanuel/arabicSlug"
         },
       ],
     };
@@ -56,27 +85,27 @@ export default {
   <div class="container max-lg:px-[20px] mx-auto my-8">
     <audio ref="audioPlayer" src="/click.mp3"></audio>
     <h1 class="text-2xl uppercase text-center">Creator of :</h1>
-   
+
     <div
-    
-      class="grid grid-cols-4 gap-3 mt-8  max-lg:grid-cols-1 w-full text-center"
+      class="grid grid-cols-4 gap-3 mt-8 max-lg:grid-cols-1 w-full text-center"
     >
-      <div
+      <NuxtLink
         class="p-6 card flex flex-col gap-5 justify-between"
         v-for="(i, index) in list"
         :key="index"
+        :to="i.link"
+        target="_blank"
       >
         <h2 class="text-3xl uppercase">
           {{ i.name }} <sup class="text-sm text-red-500"> / {{ i.tag }}</sup>
         </h2>
         <p class="text-sm">{{ i.desc }}</p>
-      </div>
+      </NuxtLink>
     </div>
   </div>
 </template>
 
 <style scoped>
-
 .card {
   background: hsl(0 0% 4%);
   box-shadow: 0px 0px 1px #ddd;
@@ -133,5 +162,4 @@ span {
   font-size: 2rem;
   color: hsl(0 0% 100%);
 }
-
 </style>

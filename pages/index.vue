@@ -57,14 +57,16 @@ export default {
     <div
       class="container h-screen flex flex-col justify-center max-lg:items-center mx-auto relative"
     >
-
       <h1
         class="text-7xl max-w-xl font-sans uppercase mx-auto text-center font-normal max-w-6xl max-lg:text-2xl max-lg:max-w-md max-lg:text-center mt-5 leading-[130%]"
       >
-        Hey, I'm <span class="line-through">Ali Khalouf</span>, <strong>A-li Khalouf</strong>
+        Hey, I'm <span class="line-through">Ali Khalouf</span>,
+        <strong>A-li Khalouf</strong>
       </h1>
-      <h2 class="text-sm text-center uppercase text-gray-400">Tech Leader & Front-end at <strong class="text-white opacity-100">Artfi</strong></h2>
-
+      <h2 class="text-sm text-center uppercase text-gray-400">
+        Building
+        <strong><NuxtLink to="https://namask.xyz" class="hover:underline hover:text-white">namask</NuxtLink></strong>
+      </h2>
     </div>
     <Creator :textColor="isLightBackground ? 'black' : 'white'" />
     <Worked />
@@ -77,7 +79,18 @@ body {
   transition: background 0.5s ease-in-out;
   color: white;
   min-height: 100vh;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
 }
 
 body.light-text {
