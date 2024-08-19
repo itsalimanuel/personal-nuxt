@@ -1,142 +1,187 @@
-<script>
-import { ref } from "vue";
+<script lang="ts" setup>
+import {gsap} from "gsap";
 
-export default {
-  setup() {
-    const colors = [
-      "#ff0000",
-      "#00ff00",
-      "#0000ff",
-      "#ffff00",
-      "#00ffff",
-      "#ff00ff",
-    ];
-    const currentColors = ref(["#000000", "#000000"]);
-    const isLightBackground = ref(false);
-
-    const changeBackgroundColor = () => {
-      const randomColor1 = colors[Math.floor(Math.random() * colors.length)];
-      const randomColor2 = colors[Math.floor(Math.random() * colors.length)];
-      currentColors.value = [randomColor1, randomColor2];
-      document.body.style.background = `linear-gradient(to bottom right, ${randomColor1}, ${randomColor2})`;
-
-      // Check if the selected colors are light
-      const isLight1 = isLightColor(randomColor1);
-      const isLight2 = isLightColor(randomColor2);
-      isLightBackground.value = isLight1 || isLight2;
-
-      // Set text color based on background color
-      const textColor = isLightBackground.value ? "black" : "white";
-      document.body.style.color = textColor;
-    };
-
-    const isLightColor = (color) => {
-      const brightness = getBrightness(color);
-      return brightness > 127; // Adjust threshold as needed
-    };
-
-    const getBrightness = (color) => {
-      const hexColor = color.replace("#", "");
-      const r = parseInt(hexColor.substr(0, 2), 16);
-      const g = parseInt(hexColor.substr(2, 2), 16);
-      const b = parseInt(hexColor.substr(4, 2), 16);
-      return (r * 299 + g * 587 + b * 114) / 1000;
-    };
-
-    return {
-      currentColors,
-      isLightBackground,
-      changeBackgroundColor,
-    };
-  },
-};
+onMounted(() => {
+  gsap.set("body", {
+    height: "100vh",
+    overflow: "hidden",
+  });
+  let animation = gsap.timeline({delay: 1.5});
+  animation
+      .to("#first", {
+        left: "20%",
+        top: "20%",
+        filter: "blur(45px)",
+        background:
+            "conic-gradient(from 180deg at 50% 50%,#16abff33 0deg,#0885ff33 55deg,#54d6ff33 120deg,#0071ff33 160deg, transparent 360deg)",
+        width: "480px",
+        borderRadius: "50%",
+        height: "360px",
+      }) .to(
+      "#second",
+      {
+        right: "20%",
+        top: "50%",
+        filter: "blur(25px)",
+        background:
+            "conic-gradient(from 180deg at 50% 50%, rgba(187, 2, 2, 0.2) 0deg, rgba(255, 65, 8, 0.2) 55deg, rgba(209, 0, 0, 0.2) 120deg, rgba(255, 71, 0, 0.2) 160deg, rgb(255 0 0 / 42%) 360deg)",
+        width: "480px",
+        borderRadius: "70%",
+        height: "260px",
+        onComplete: () => {
+          gsap.to(".target", {
+            top: 0,
+            scaleY: 9,
+            ease: "power4.out",
+            delay: 0.5,
+            stagger: {
+              amount: 0.4,
+            },
+            onComplete: () => {
+              gsap.to("body", {
+                height: "100%",
+                overflow: "auto",
+                ease: "none",
+                onComplete: () => {
+                  gsap.to("#creator", {
+                    opacity: 1,
+                  })
+                },
+              });
+            },
+          });
+        },
+      },
+      "-=0.5"
+  );
+})
 </script>
 
 <template>
   <div class="h-full">
+    <NuxtImg
+        class="fixed top-0 left-0 w-full h-full object-cover opacity-30"
+        src="/share/bg-intro.svg"
+        alt=""
+    />
     <div
-      class="container h-screen flex flex-col justify-center max-lg:items-center mx-auto relative"
+        class="h-screen w-full relative overflow-hidden"
     >
-      <h1
-        class="text-7xl max-w-xl font-sans uppercase mx-auto text-center font-normal max-w-6xl max-lg:text-2xl max-lg:max-w-md max-lg:text-center mt-5 leading-[130%]"
-      >
-        Hey, I'm <span class="line-through">Ali Khalouf</span>,
-        <strong>A-li Khalouf</strong>
-      </h1>
-      <h2 class="text-sm text-center uppercase text-gray-400">
-        Building
-        <strong><NuxtLink to="https://namask.xyz" class="hover:underline hover:text-white">namask</NuxtLink></strong>
-      </h2>
+
+      <div class="container flex flex-col justify-center h-screen relative max-lg:items-center mx-auto">
+        <div id="first" class="intro-circle1"></div>
+        <div id="second" class="intro-circle2"></div>
+        <div class="intro-name">
+          <h3>
+            <span class="target">a</span>
+            <span class="target">l</span>
+            <span class="target">i</span>
+            <span> </span>
+            <span class="target">k</span>
+            <span class="target">h</span>
+            <span class="target">a</span>
+            <span class="target">l</span>
+            <span class="target">o</span>
+            <span class="target">u</span>
+            <span class="target">f</span>
+          </h3>
+          <h2>
+            <span  class="target">I</span>
+            <span class="target"> </span>
+            <span class="target">A</span>
+            <span class="target">M </span>
+            <span class="yellow target">creative</span>
+            <span class="target"> D</span>
+            <span class="target">E</span>
+            <span class="target">V</span>
+            <span class="target">E</span>
+            <span class="target">L</span>
+            <span class="target">O</span>
+            <span class="target">P</span>
+            <span class="target">E</span>
+            <span class="target">R</span>
+          </h2>
+        </div>
+      </div>
+
     </div>
-    <Creator :textColor="isLightBackground ? 'black' : 'white'" />
-    <Worked />
-    <Projects />
+    <Creator id="creator" class="-mt-40 opacity-0 relative" :textColor="'black'"/>
+    <Worked class="relative"/>
+    <Projects class="relative"/>
   </div>
 </template>
 
+<style scoped>
+
+.intro-circle1 {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  background: #000;
+}
+
+.intro-circle2 {
+  position: absolute;
+  width: 0;
+  height: 0;
+  background: #000;
+}
+
+.intro-name {
+  position: relative;
+}
+
+.intro-name h3 {
+  font-size: 36px;
+  text-transform: uppercase;
+  overflow: hidden;
+  text-align: center;
+}
+
+.intro-name h3 span {
+  position: relative;
+  top: 100px;
+}
+
+.intro-name h2 {
+  text-transform: uppercase;
+  overflow: hidden;
+  font-size: 26px;
+  line-height: 26px;
+  text-align: center;
+}
+
+.intro-name h2 span {
+  position: relative;
+  top: 100px;
+}
+
+.intro-name h2 .yellow {
+  color: rgb(22, 171, 255);
+}
+</style>
+
 <style>
+
 body {
   transition: background 0.5s ease-in-out;
   color: white;
   min-height: 100vh;
-  font-family:
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    "Open Sans",
-    "Helvetica Neue",
-    sans-serif;
+  font-family: system-ui,
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  Roboto,
+  Oxygen,
+  Ubuntu,
+  Cantarell,
+  "Open Sans",
+  "Helvetica Neue",
+  sans-serif;
 }
 
 body.light-text {
   color: black;
-}
-
-@keyframes waves {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-
-  100% {
-    transform: scale(4);
-    opacity: 0;
-  }
-}
-
-@keyframes bloop {
-  0% {
-    transform: scale3d(1, 1, 1);
-  }
-
-  30% {
-    transform: scale3d(1.25, 0.75, 1);
-  }
-
-  40% {
-    transform: scale3d(0.75, 1.25, 1);
-  }
-
-  50% {
-    transform: scale3d(1.15, 0.85, 1);
-  }
-
-  65% {
-    transform: scale3d(0.95, 1.05, 1);
-  }
-
-  75% {
-    transform: scale3d(1.05, 0.95, 1);
-  }
-
-  100% {
-    transform: scale3d(1, 1, 1);
-  }
 }
 
 .delay1 {

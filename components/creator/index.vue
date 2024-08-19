@@ -11,23 +11,35 @@ export default {
   data() {
     return {
       list: [
+      {
+          name: "Ton/Vue",
+          tag: "package",
+          desc: "TonConnect UI Vue is a library for the TonConnect SDK, providing components and context to connect your Vue.js app with TON Wallets.",
+          link: "https://ui-vue-five.vercel.app/",
+        },
+        {
+          name: "Capitano",
+          tag: "app",
+          desc: "It’s a dedicated platform designed to enhance every aspect of your sporting journey.",
+          link: "https://capitano.ae",
+        },
         {
           name: "Renux",
           tag: "UI",
           desc: "Renux UI Component Library is a collection of reusable UI components designed for building modern web applications using nuxtjs",
-          link: "https://github.com/itsalimanuel/renux"
+          link: "https://github.com/itsalimanuel/renux",
         },
         {
           name: "Renix",
           tag: "UI",
           desc: "Renix UI Component Library is a collection of reusable UI components designed for building modern web applications using React, Next.js, and Remix.",
-          link: "https://github.com/itsalimanuel/renix"
+          link: "https://github.com/itsalimanuel/renix",
         },
         {
           name: "Drop",
           tag: "UI",
           desc: "Drop UI Component Library is a collection of reusable UI components designed for building modern web applications using Vue, nuxt.js.",
-          link: "https://github.com/itsalimanuel/drop"
+          link: "https://github.com/itsalimanuel/drop",
         },
         {
           name: "Listra",
@@ -47,18 +59,18 @@ export default {
           desc: "Unveiling our AI Customer Service Tool, your next-gen support solution. Enjoy personalized, lightning-fast assistance 24/7, all while gaining valuable insights",
           link: "https://www.namask.xyz/",
         },
-        
+
         {
           name: "Pigeon",
           tag: "JS",
           desc: "Pigeon is a @vuejs component library designed to help website owners easily add chat/live support and contact information to their websites.",
-          link: "https://github.com/itsalimanuel/pigeon"
+          link: "https://github.com/itsalimanuel/pigeon",
         },
         {
           name: "arabicSlug",
           tag: "JS",
           desc: "Arabic text to Latin and URL slug converter.",
-          link: "https://github.com/itsalimanuel/arabicSlug"
+          link: "https://github.com/itsalimanuel/arabicSlug",
         },
       ],
     };

@@ -9,18 +9,18 @@
       class="mx-auto mt-10 flex flex-wrap items-center justify-between gap-8"
     >
       <NuxtLink to="https://artfi.world" target="_blank" class="">
-        <NuxtImg src="../../artfi.svg" class="w-22 filter-omg" />
+        <NuxtLink src="/artfi.svg" class="w-18 filter-omg" />
       </NuxtLink>
       <NuxtLink to="https://starex.sg" target="_blank">
-        <NuxtImg src="../../starex.png" class="w-18 h-20 filter-omg" />
+        <NuxtImg src="/starex.png" class="w-18 h-20 filter-omg" />
       </NuxtLink>
       <NuxtLink to="https://carbonmobile.com" target="_blank">
-        <NuxtImg src="../../carbon.svg" class="w-16 h-20 filter-omg" />
+        <NuxtImg src="/carbon.svg" class="w-16 h-20 filter-omg" />
       </NuxtLink>
-      <NuxtImg src="../../aqua.png" class="w-16 h-16 filter-omg" />
-      <NuxtImg src="../../choose.svg" class="w-20 h-20 filter-omg" />
-      <NuxtImg src="../../nexe.png" class="w-16 h-16 filter-omg" />
-      <NuxtImg src="../../sputink.png" class="w-22 h-20 filter-omg" />
+      <NuxtImg src="/aqua.png" class="w-16 h-16 filter-omg" />
+      <NuxtImg src="/choose.svg" class="w-20 h-20 filter-omg" />
+      <NuxtImg src="/nexe.png" class="w-16 h-16 filter-omg" />
+      <NuxtImg src="/sputink.png" class="w-22 h-20 filter-omg" />
     </div>
   </div>
 </template>
